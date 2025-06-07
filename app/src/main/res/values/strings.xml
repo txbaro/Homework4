@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">The Information Book App</string>
+    <string name="the_countries">The Countries</string>
+    <string name="the_leaders">The Leaders</string>
+    <string name="the_museums">The Museums</string>
+    <string name="seven_wonders">Seven Wonders of The World</string>
+    <!-- Countries -->
+    <string name="uk_flag_desc">Flag of the United Kingdom</string>
+    <string name="italy_flag_desc">Flag of Italy</string>
+    <string name="france_flag_desc">Flag of France</string>
+    <!-- Leaders -->
+    <string name="leader1_image_desc">Image of Keir Starmer</string>
+    <string name="leader2_image_desc">Image of Giorgia Meloni</string>
+    <string name="leader3_image_desc">Image of Emmanuel Macron</string>
+    <!-- Museums -->
+    <string name="louvre_image_desc">Image of the Louvre Museum</string>
+    <string name="uffizi_image_desc">Image of the Uffizi Gallery</string>
+    <string name="british_museum_image_desc">Image of the British Museum</string>
+    <!-- Wonders -->
+    <string name="great_wall_image_desc">Image of the Great Wall of China</string>
+    <string name="colosseum_image_desc">Image of the Colosseum</string>
+    <string name="taj_mahal_image_desc">Image of the Taj Mahal</string>
+    <!-- MainActivity -->
+    <string name="countries_desc">Image representing countries</string>
+    <string name="leaders_desc">Image representing world leaders</string>
+    <string name="museums_desc">Image of a famous museum</string>
+    <string name="wonders_desc">Image of a wonder of the world</string>
+    <string name="todo">TODO</string>
+</resources>
