@@ -9,27 +9,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.fragment.app.Fragment;
 
 public class Leader1Fragment extends Fragment {
 
     private ProgressBar progressBar;
-    private View contentView;
+    private View contentLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
 
         progressBar = view.findViewById(R.id.leaderProgressBar);
-        contentView = view.findViewById(R.id.contentLayout);
+        contentLayout = view.findViewById(R.id.contentLayout);
 
         progressBar.setVisibility(View.VISIBLE);
-        contentView.setVisibility(View.GONE);
+        contentLayout.setVisibility(View.GONE);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             progressBar.setVisibility(View.GONE);
-            contentView.setVisibility(View.VISIBLE);
+            contentLayout.setVisibility(View.VISIBLE);
         }, 1500);
 
         ImageView infoImage = view.findViewById(R.id.infoImage);
@@ -40,7 +39,7 @@ public class Leader1Fragment extends Fragment {
         TextView fact5Text = view.findViewById(R.id.fact5Text);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
 
-        infoImage.setImageResource(R.drawable.otf);
+        infoImage.setImageResource(R.drawable.keir_starmer);
         infoImage.setContentDescription(getString(R.string.leader1_image_desc));
         fact1Text.setText("Name: Keir Starmer");
         fact2Text.setText("Country: United Kingdom");

@@ -1,18 +1,35 @@
 package com.example.homework4;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 public class ItalyFragment extends Fragment {
 
+    private ProgressBar progressBar;
+    private View contentLayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
+
+        progressBar = view.findViewById(R.id.leaderProgressBar);
+        contentLayout = view.findViewById(R.id.contentLayout);
+
+        progressBar.setVisibility(View.VISIBLE);
+        contentLayout.setVisibility(View.GONE);
+
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            progressBar.setVisibility(View.GONE);
+            contentLayout.setVisibility(View.VISIBLE);
+        }, 1500);
 
         ImageView infoImage = view.findViewById(R.id.infoImage);
         TextView fact1Text = view.findViewById(R.id.fact1Text);
@@ -22,14 +39,14 @@ public class ItalyFragment extends Fragment {
         TextView fact5Text = view.findViewById(R.id.fact5Text);
         TextView descriptionText = view.findViewById(R.id.descriptionText);
 
-        infoImage.setImageResource(R.drawable.otf);
+        infoImage.setImageResource(R.drawable.italy);
         infoImage.setContentDescription(getString(R.string.italy_flag_desc));
-        fact1Text.setText("Capital: Rome");
-        fact2Text.setText("Largest City: Rome");
-        fact3Text.setText("National Language: Italian");
-        fact4Text.setText("F Total Area: 301,340 km²");
+        fact1Text.setText("Name: Italy");
+        fact2Text.setText("Capital: Rome");
+        fact3Text.setText("Population: ~60 million");
+        fact4Text.setText("Language: Italian");
         fact5Text.setText("Currency: Euro");
-        descriptionText.setText("Italy, officially the Italian Republic, is a country in Southern Europe, known for its rich history, art, and cuisine. Located on the Italian Peninsula, it includes the islands of Sicily and Sardinia. Italy is famous for historical landmarks like the Colosseum, the Leaning Tower of Pisa, and the Vatican City, as well as its contributions to art through the Renaissance, led by figures like Michelangelo and Leonardo da Vinciháduuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuufshdgfjsgdfgsdfgbhdbfhsdvgfvsdycbysdgbcsgydbcgysdbcgybsdgycbsdygcbsydcbygsdbvctysdvcgysdvcyvsdycvsdycvsydcvsydvcysgdcvysdcvysduhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggmádnasmdbjkasbdjkasdbasdbuiasbduiasuifcausfuiasfuiabsiufasuidiausfuiasbfuiasuifhiuhasuifbasuifbuiasfiuasbfuiasbfuiasbfuiabsfuibasiufbausifbvasuifbasuifoiahasfhasihfasiuhbasiugfuasihfuiasbvguasbaugisbfhasu9fhasiugfasugfuiashgfuiasbguoihasbnoigshasoighasuiignausoghuasnghuoasnghoiasxnguoiahnsigohansoighasoighaoishgioashgioashgoiashgoiashgokashiguhasg.");
+        descriptionText.setText("Italy is renowned for its rich history, art, and cuisine. Rome, its capital, is home to ancient landmarks like the Colosseum and the Pantheon, while cities like Florence and Venice are cultural treasures.");
 
         return view;
     }
